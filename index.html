@@ -1,41 +1,46 @@
 <!doctype html>
 <html>
     <head>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+      <meta charset="utf-8">
     </head>
-
-    <body style="margin: 0; overflow: hidden;">
-        <a-scene
-            vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-            id="scene"
-            embedded
-            gesture-detector
-        >
-            <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
-                <a-image
-                    src="assets/asset.png"
-                    scale="1 1 1"
-                    class="clickable"
-                    rotation="-90 0 0"
-                    gesture-handler
-                ></a-image>
-            </a-marker>
-
-            <a-entity camera></a-entity>
-        </a-scene>
+    <body>
+    <div>
+    <p align = "center">
+    <font color="gray" face="Verdana, Geneva, sans-serif"> <h3 style="text-align:center">Welcome to Floating Utopia</h3><br>
+    Reality is semi-real. 
+    The boundaries of it's biological and digital body are similar to a surface of swamps - zones of geological instability, floating boundaries between land and water. 
+    They are, at the same time, natural ecotones - sources of biodiversity and places of stress, where ecosystems collide and various ways of species coexistence meet.
+    <br>We are considering various options for assembling new utopian scenarios of the world, the producers of which are algorithms and neural networks.
+    The resulting reconstructions are hybrid patches, inhabited by a variety of myths and strange inhabitants - datasets involved in rehearsing the end of the world and visualizing its restoration. 
+    While living organisms on Earth are gradually filling with plastic, a new (bio) diverse utopia is being written by machines.
+    <br><br>
+    <p align = "left"> Press the button to enter<br></font>
+        
+   <p align = "center">    
+   <style>
+    model-viewer {
+    width: 1000px;
+    height: 500px;
+    }
+    </style>
+    <model-viewer src="baking_4figures_and dots2.glb" shadow-intensity="1" alt="scene" auto-rotate ar magic-leap quick-look-browsers="safari chrome" ar-modes="webxr scene-viewer quick-look"
+                  environment-image="neutral" camera-controls unstable-webxr>
+        
+        <!--ios-src="usdz_baking_4figures_and_dots2___1625831425174.usdz"-->
+      <button slot="ar-button" style="background-color: white; border-radius: 4px; position: absolute; top: 16px; left: 16px; height: 35px; width: 200px; font-size: 24px">
+      👋 Go into AR
+      </button>
+    </model-viewer>
+    </div>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"> 
+    </script>
+    
+    <!-- 💁 Include both scripts below to support all browsers!-->
+    <script type="module" src="https://unpkg.com/@google/model-viewer@v0.9.0/dist/model-viewer.js">
+    </script>
+    <script nomodule="" src="https://unpkg.com/@google/model-viewer@v0.9.0/dist/model-viewer-legacy.js">
+    </script>  
+   
+        
     </body>
 </html>
